@@ -24,11 +24,9 @@ Las variables principales analizadas incluyen:
 
 ---
 
-## Ejecutar todo con un comando
+## Ejecutar todo con un comando - Instrucciones Detalladas
 
-## Instrucciones Detalladas
-
-## Requisitos Previos
+**Requisitos Previos**
 
 ### 1. **Instalar R**
    - Descarga R desde [https://cran.r-project.org/](https://cran.r-project.org/)
