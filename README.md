@@ -76,7 +76,7 @@ Como complemento al código, se entregan dos videos explicativos, dirigidos al c
 
 El video puede encontrar en el siguiente enlace: 
 
-[![Video explicativo](https://img.youtube.com/vi/XXXXX/0.jpg)](https://www.youtube.com/watch?v=XXXXX)
+[![Video explicativo](https://img.youtube.com/vi/DkHKE8L-Oi8/0.jpg)](https://www.youtube.com/watch?v=DkHKE8L-Oi8)
 
 ### 2. **Video técnico con explicación metodológica**
 
