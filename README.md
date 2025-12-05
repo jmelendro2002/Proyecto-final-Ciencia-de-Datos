@@ -76,6 +76,8 @@ Como complemento al código, se entregan dos videos explicativos, dirigidos al c
 
 El video puede encontrar en el siguiente enlace: 
 
+[![Miniatura](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+
 ### 2. **Video técnico con explicación metodológica**
 
 El video puede encontrar en el siguiente enlace: 
