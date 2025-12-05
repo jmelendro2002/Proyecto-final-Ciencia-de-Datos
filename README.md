@@ -15,16 +15,22 @@ Este proyecto realiza un análisis econométrico espacial de indicadores económ
 - Visualización geoespacial de indicadores
 
 Las variables principales analizadas incluyen:
-- EMBI soberano 2023
-- Préstamos del FMI
-- Balance primario
-- Balance de cuenta corriente
-- Inflación anual
-- Y otras variables macroeconómicas
+
+| Variable | Descripción | Fuente |
+|----------|-------------|--------|
+| `EMBI_2023` | Emerging Markets Bond Index | Banco Mundial |
+| `imf_loans_2023` | Préstamos del FMI | FMI |
+| `primary_balance` | Balance primario como % del PIB | FMI |
+| `overall_balance` | Balance general como % del PIB | FMI |
+| `ratio_of_reserve_ara_metric_unit` | Índice de cobertura de reservas ARA | FMI |
+| `exports_gdp` | Exportaciones como % del PIB | Banco Mundial |
+| `imports_gdp` | Importaciones como % del PIB | Banco Mundial |
+| `current_acount_balance_gdp` | Balance de cuenta corriente como % del PIB | FMI |
+| `inflation_annual` | Inflación anual (%) | FMI |
 
 ---
 
-## Ejecutar todo con un comando - Instrucciones Detalladas
+## Instrucciones Detalladas para ejecutar
 
 **Requisitos Previos**
 
@@ -64,6 +70,8 @@ El script instalará automáticamente los paquetes necesarios usando `pacman`:
 
 ## Videos explicativos
 
+Como complemento al código, se entregan dos videos explicativos, dirigidos al cliente, donde se puede encontrar una explicación detallada del problema, los resultados y recomendaciones; así como la metodología, resultados técnicos y limitaciones del producto.
+
 ### 1. **Presentación ejecutiva dirigida al cliente**
 
 El video puede encontrar en el siguiente enlace: 
@@ -99,22 +107,6 @@ Al ejecutar el script, obtendrás:
 
 ---
 
-## Variables Principales en el Análisis
-
-| Variable | Descripción | Fuente |
-|----------|-------------|--------|
-| `EMBI_2023` | Emerging Markets Bond Index | Banco Mundial |
-| `imf_loans_2023` | Préstamos del FMI | FMI |
-| `primary_balance` | Balance primario como % del PIB | FMI |
-| `overall_balance` | Balance general como % del PIB | FMI |
-| `ratio_of_reserve_ara_metric_unit` | Índice de cobertura de reservas ARA | FMI |
-| `exports_gdp` | Exportaciones como % del PIB | Banco Mundial |
-| `imports_gdp` | Importaciones como % del PIB | Banco Mundial |
-| `current_acount_balance_gdp` | Balance de cuenta corriente como % del PIB | FMI |
-| `inflation_annual` | Inflación anual (%) | FMI |
-
----
-
 ## Notas Técnicas
 
 - **Proyección Espacial:** Se utiliza la proyección EPSG:10603 (recomendada por el World Geodetic System para Latinoamérica)
@@ -125,34 +117,8 @@ Al ejecutar el script, obtendrás:
 
 ---
 
-## Solución de Problemas
-
-### Error: "Package not found"
-- El script usa `pacman::p_load()` que instala automáticamente paquetes faltantes
-- Si persiste el error, instala manualmente:
-```r
-install.packages(c("tidyverse", "sf", "tmap", "spatialreg", ...))
-```
-
-### Los mapas no aparecen
-- Asegúrate de que tienes una ventana gráfica activa en RStudio
-- Usa `X11()` o similar para abrir una ventana gráfica en sistemas Unix/Linux
-
-### Error de datos en URL
-- El script intenta descargar datos desde GitHub
-- Verifica tu conexión a internet
-- Si GitHub está inaccesible, asegúrate de tener `data/Data.csv` en el directorio local
-
----
-
 ## Referencias
 
 - Natural Earth: https://www.naturalearthdata.com/
 - R-spatial: https://r-spatial.org/
 - Econometría Espacial: https://cran.r-project.org/web/packages/spatialreg/
-
----
-
-## Licencia
-
-Proyecto académico - Taller Final Ciencia de Datos y Econometría Aplicada
