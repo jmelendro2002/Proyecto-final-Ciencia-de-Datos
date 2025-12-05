@@ -5,7 +5,7 @@
 
 ---
 
-## 📋 Descripción del Proyecto
+## Descripción del Proyecto
 
 Este proyecto realiza un análisis econométrico espacial de indicadores económicos clave en países de Latinoamérica, incluyendo:
 - Análisis preliminar de variables macro-económicas
@@ -24,7 +24,7 @@ Las variables principales analizadas incluyen:
 
 ---
 
-## 🚀 Quick Start - Ejecutar todo con un comando
+## Quick Start - Ejecutar todo con un comando
 
 ### Opción 1: Desde macOS/Linux (Recomendado)
 
@@ -38,9 +38,7 @@ Rscript script/código_FINAL.R
 source("script/código_FINAL.R")
 ```
 
----
-
-## 📦 Requisitos Previos
+## Requisitos Previos
 
 ### 1. **Instalar R**
    - Descarga R desde [https://cran.r-project.org/](https://cran.r-project.org/)
@@ -67,7 +65,7 @@ El script instalará automáticamente los paquetes necesarios usando `pacman`:
 
 ---
 
-## 📂 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 taller-final-ciencia-datos/
@@ -80,7 +78,7 @@ taller-final-ciencia-datos/
 
 ---
 
-## 🔄 Estructura del Análisis
+## Estructura del Análisis
 
 ### 1. **Preparación del Entorno y Carga de Datos**
    - Limpieza del espacio de trabajo
@@ -117,7 +115,7 @@ taller-final-ciencia-datos/
 
 ---
 
-## 📊 Salidas Esperadas
+## Salidas Esperadas
 
 Al ejecutar el script, obtendrás:
 
@@ -142,7 +140,7 @@ Al ejecutar el script, obtendrás:
 
 ---
 
-## 🛠️ Instrucciones Detalladas
+## Instrucciones Detalladas
 
 ### En Terminal/Command Prompt:
 
@@ -153,6 +151,50 @@ cd /ruta/a/taller-final-ciencia-datos
 # Ejecuta el script
 Rscript script/código_FINAL.R
 ```
+
+### Si NO tienes Git ni Homebrew (descargar ZIP desde GitHub)
+
+Si tu cliente no tiene `git` ni `homebrew`, puede descargar el repositorio como ZIP desde GitHub y ejecutar el script localmente. Aquí tienes tres opciones fáciles — copiar/pegar según prefiera:
+
+- Opción A — Usar el navegador (más simple):
+
+   1. Abrir el enlace del repositorio en el navegador: `https://github.com/jmelendro2002/Proyecto-final-Ciencia-de-Datos`
+   2. Pulsar **Code → Download ZIP** y descomprimir el ZIP.
+   3. Abrir la Terminal y ejecutar (ejemplo si la carpeta está en `~/Downloads`):
+
+```bash
+cd ~/Downloads/Proyecto-final-Ciencia-de-Datos-main
+Rscript "script/código_FINAL.R"
+```
+
+- Opción B — Descargar y descomprimir desde la Terminal (macOS/Linux):
+
+```bash
+# Descargar ZIP del branch main y descomprimir
+curl -L -o repo.zip "https://github.com/jmelendro2002/Proyecto-final-Ciencia-de-Datos/archive/refs/heads/main.zip"
+unzip repo.zip
+cd Proyecto-final-Ciencia-de-Datos-main
+
+# Ejecutar el script con Rscript
+Rscript "script/código_FINAL.R"
+```
+
+- Opción C — Dentro de R (sin salir a Terminal):
+
+```r
+tmp <- tempdir()
+zipfile <- file.path(tmp, "repo.zip")
+download.file("https://github.com/jmelendro2002/Proyecto-final-Ciencia-de-Datos/archive/refs/heads/main.zip", zipfile, mode = "wb")
+unzip(zipfile, exdir = tmp)
+dir <- list.dirs(tmp, recursive = FALSE)[grepl("Proyecto-final-Ciencia-de-Datos", list.dirs(tmp, recursive = FALSE))[1]]
+setwd(dir)
+source("script/código_FINAL.R")
+```
+
+Notas rápidas:
+- Asegúrate de tener `R` y `Rscript` instalados. Verificar con `Rscript --version`.
+- El script intentará instalar paquetes faltantes (requiere conexión a Internet). Si falla la instalación de paquetes espaciales como `sf`, puede ser necesario instalar dependencias del sistema (`gdal`, `proj`, `geos`) o usar el instalador binario de R desde CRAN.
+
 
 ### En RStudio:
 
@@ -172,7 +214,7 @@ source("script/código_FINAL.R")
 
 ---
 
-## ⚙️ Variables Principales en el Análisis
+## Variables Principales en el Análisis
 
 | Variable | Descripción | Fuente |
 |----------|-------------|--------|
@@ -188,7 +230,7 @@ source("script/código_FINAL.R")
 
 ---
 
-## 📝 Notas Técnicas
+## Notas Técnicas
 
 - **Proyección Espacial:** Se utiliza la proyección EPSG:10603 (recomendada por el World Geodetic System para Latinoamérica)
 - **Matrices de Pesos Espaciales:** 
@@ -198,7 +240,7 @@ source("script/código_FINAL.R")
 
 ---
 
-## 🐛 Solución de Problemas
+## Solución de Problemas
 
 ### Error: "Package not found"
 - El script usa `pacman::p_load()` que instala automáticamente paquetes faltantes
@@ -218,7 +260,7 @@ install.packages(c("tidyverse", "sf", "tmap", "spatialreg", ...))
 
 ---
 
-## 📚 Referencias
+## Referencias
 
 - Natural Earth: https://www.naturalearthdata.com/
 - R-spatial: https://r-spatial.org/
@@ -226,6 +268,6 @@ install.packages(c("tidyverse", "sf", "tmap", "spatialreg", ...))
 
 ---
 
-## 📄 Licencia
+## Licencia
 
 Proyecto académico - Taller Final Ciencia de Datos y Econometría Aplicada
