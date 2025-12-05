@@ -398,3 +398,9 @@ union$res_SARAR <- residuals(sarar_embi)
 tm_shape(union) +
   tm_fill("res_SARAR", palette = "magma", style = "quantile", n = 5, title = "Residuales") +
   tm_borders(col = "white", lwd = 0.2) 
+
+
+
+
+
+
