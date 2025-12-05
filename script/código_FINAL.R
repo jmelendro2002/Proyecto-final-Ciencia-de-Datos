@@ -109,6 +109,7 @@ cor(
 # Vamos a crear mapas para visualizar las variables con correlaciones más importantes
 
 tmap_mode("plot")
+options(viewer = NULL)  # Asegurar que los mapas se muestren en la ventana gráfica de RStudio
 
 map_theme <- tm_style("white") + 
   tm_layout(
