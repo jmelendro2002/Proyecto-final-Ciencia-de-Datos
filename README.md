@@ -60,61 +60,17 @@ El script instalará automáticamente los paquetes necesarios usando `pacman`:
    6. Presionar `Ctrl+Shift+Enter` (o `Cmd+Shift+Enter` en macOS) para ejecutar todo el script
    7. O usar `Ctrl+A` → `Ctrl+Enter` para seleccionar y ejecutar
 
-### 4. **Alternativa con un solo código**
-
-   1. Abrir el enlace del repositorio en el navegador: `https://github.com/jmelendro2002/Proyecto-final-Ciencia-de-Datos`
-   2. Pulsar **Code → Download ZIP** y descomprimir el ZIP.
-   3. Abrir RStudio
-   4. Copiar y pegar el siguiente código:
-
-```r
-tmp <- tempdir()
-zipfile <- file.path(tmp, "repo.zip")
-download.file("https://github.com/jmelendro2002/Proyecto-final-Ciencia-de-Datos/archive/refs/heads/main.zip", zipfile, mode = "wb")
-unzip(zipfile, exdir = tmp)
-dir <- list.dirs(tmp, recursive = FALSE)[grepl("Proyecto-final-Ciencia-de-Datos", list.dirs(tmp, recursive = FALSE))[1]]
-setwd(dir)
-source("script/código_FINAL.R")
-```
-   5. Presionar `Ctrl+Shift+Enter` (o `Cmd+Shift+Enter` en macOS) para ejecutar todo el script
-   6. O usar `Ctrl+A` → `Ctrl+Enter` para seleccionar y ejecutar
-
 ---
 
-## Estructura del Análisis
+## Videos explicativos
 
-### 1. **Preparación del Entorno y Carga de Datos**
-   - Limpieza del espacio de trabajo
-   - Instalación y carga de paquetes
-   - Obtención de datos geoespaciales de Latinoamérica
-   - Importación y limpieza de datos económicos
+### 1. **Presentación ejecutiva dirigida al cliente**
 
-### 2. **Análisis Preliminar**
-   - Estadísticas descriptivas
-   - Matriz de correlaciones
-   - Mapas temáticos de variables clave:
-     - EMBI soberano 2023
-     - Préstamos del FMI
-     - Balance primario
-     - Cobertura de reservas ARA
-     - Balance en cuenta corriente
-     - Inflación anual
+El video puede encontrar en el siguiente enlace: 
 
-### 3. **Modelo Base OLS**
-   - Regresión lineal simple
-   - Variable dependiente: EMBI 2023
-   - Variables independientes: Indicadores económicos
+### 2. **Video técnico con explicación metodológica**
 
-### 4. **Análisis de Dependencia Espacial**
-   - Construcción de matrices de pesos espaciales:
-     - Matriz de contigüidad (Queen)
-     - Matriz de regiones económicas
-   - Test de Lagrange Multiplier (LM)
-
-### 5. **Modelos Espaciales**
-   - Modelo SARAR (Spatial Autoregressive Autoregressive)
-   - Cálculo de efectos directos, indirectos y totales
-   - Análisis de residuales espaciales
+El video puede encontrar en el siguiente enlace: 
 
 ---
 
