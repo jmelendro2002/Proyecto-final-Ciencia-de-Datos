@@ -78,6 +78,9 @@ El video puede encontrar en el siguiente enlace:
 
 [![Miniatura](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
+[![Video explicativo](https://img.youtube.com/vi/nSBbX5gn1Lg/0.jpg)](https://www.youtube.com/watch?v=nSBbX5gn1Lg)
+
+
 ### 2. **Video técnico con explicación metodológica**
 
 El video puede encontrar en el siguiente enlace: 
