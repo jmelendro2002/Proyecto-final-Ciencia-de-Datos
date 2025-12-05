@@ -26,17 +26,60 @@ Las variables principales analizadas incluyen:
 
 ## Quick Start - Ejecutar todo con un comando
 
-### Opción 1: Desde macOS/Linux (Recomendado)
+## Instrucciones Detalladas
+
+### En Terminal/Command Prompt:
 
 ```bash
+# Navega al directorio del proyecto
+cd /ruta/a/taller-final-ciencia-datos
+
+# Ejecuta el script
 Rscript script/código_FINAL.R
 ```
 
-### Opción 2: Desde RStudio o R interactivo
+### Si NO tienes Git ni Homebrew (descargar ZIP desde GitHub)
+
+Si tu cliente no tiene `git` ni `homebrew`, puede descargar el repositorio como ZIP desde GitHub y ejecutar el script localmente. Aquí tienes tres opciones fáciles — copiar/pegar según prefiera:
+
+- Opción A — Usar el navegador (más simple):
+
+   1. Abrir el enlace del repositorio en el navegador: `https://github.com/jmelendro2002/Proyecto-final-Ciencia-de-Datos`
+   2. Pulsar **Code → Download ZIP** y descomprimir el ZIP.
+   3. Abrir la Terminal y ejecutar (ejemplo si la carpeta está en `~/Downloads`):
+
+```bash
+cd ~/Downloads/Proyecto-final-Ciencia-de-Datos-main
+Rscript "script/código_FINAL.R"
+```
+
+- Opción B — Descargar y descomprimir desde la Terminal (macOS/Linux):
+
+```bash
+# Descargar ZIP del branch main y descomprimir
+curl -L -o repo.zip "https://github.com/jmelendro2002/Proyecto-final-Ciencia-de-Datos/archive/refs/heads/main.zip"
+unzip repo.zip
+cd Proyecto-final-Ciencia-de-Datos-main
+
+# Ejecutar el script con Rscript
+Rscript "script/código_FINAL.R"
+```
+
+- Opción C — Dentro de R (sin salir a Terminal):
 
 ```r
+tmp <- tempdir()
+zipfile <- file.path(tmp, "repo.zip")
+download.file("https://github.com/jmelendro2002/Proyecto-final-Ciencia-de-Datos/archive/refs/heads/main.zip", zipfile, mode = "wb")
+unzip(zipfile, exdir = tmp)
+dir <- list.dirs(tmp, recursive = FALSE)[grepl("Proyecto-final-Ciencia-de-Datos", list.dirs(tmp, recursive = FALSE))[1]]
+setwd(dir)
 source("script/código_FINAL.R")
 ```
+
+Notas rápidas:
+- Asegúrate de tener `R` y `Rscript` instalados. Verificar con `Rscript --version`.
+- El script intentará instalar paquetes faltantes (requiere conexión a Internet). Si falla la instalación de paquetes espaciales como `sf`, puede ser necesario instalar dependencias del sistema (`gdal`, `proj`, `geos`) o usar el instalador binario de R desde CRAN.
 
 ## Requisitos Previos
 
@@ -124,63 +167,6 @@ Al ejecutar el script, obtendrás:
 
 4. **Gráficos de Diagnóstico**
    - Mapa de residuales del modelo SARAR
-
----
-
-## Instrucciones Detalladas
-
-### En Terminal/Command Prompt:
-
-```bash
-# Navega al directorio del proyecto
-cd /ruta/a/taller-final-ciencia-datos
-
-# Ejecuta el script
-Rscript script/código_FINAL.R
-```
-
-### Si NO tienes Git ni Homebrew (descargar ZIP desde GitHub)
-
-Si tu cliente no tiene `git` ni `homebrew`, puede descargar el repositorio como ZIP desde GitHub y ejecutar el script localmente. Aquí tienes tres opciones fáciles — copiar/pegar según prefiera:
-
-- Opción A — Usar el navegador (más simple):
-
-   1. Abrir el enlace del repositorio en el navegador: `https://github.com/jmelendro2002/Proyecto-final-Ciencia-de-Datos`
-   2. Pulsar **Code → Download ZIP** y descomprimir el ZIP.
-   3. Abrir la Terminal y ejecutar (ejemplo si la carpeta está en `~/Downloads`):
-
-```bash
-cd ~/Downloads/Proyecto-final-Ciencia-de-Datos-main
-Rscript "script/código_FINAL.R"
-```
-
-- Opción B — Descargar y descomprimir desde la Terminal (macOS/Linux):
-
-```bash
-# Descargar ZIP del branch main y descomprimir
-curl -L -o repo.zip "https://github.com/jmelendro2002/Proyecto-final-Ciencia-de-Datos/archive/refs/heads/main.zip"
-unzip repo.zip
-cd Proyecto-final-Ciencia-de-Datos-main
-
-# Ejecutar el script con Rscript
-Rscript "script/código_FINAL.R"
-```
-
-- Opción C — Dentro de R (sin salir a Terminal):
-
-```r
-tmp <- tempdir()
-zipfile <- file.path(tmp, "repo.zip")
-download.file("https://github.com/jmelendro2002/Proyecto-final-Ciencia-de-Datos/archive/refs/heads/main.zip", zipfile, mode = "wb")
-unzip(zipfile, exdir = tmp)
-dir <- list.dirs(tmp, recursive = FALSE)[grepl("Proyecto-final-Ciencia-de-Datos", list.dirs(tmp, recursive = FALSE))[1]]
-setwd(dir)
-source("script/código_FINAL.R")
-```
-
-Notas rápidas:
-- Asegúrate de tener `R` y `Rscript` instalados. Verificar con `Rscript --version`.
-- El script intentará instalar paquetes faltantes (requiere conexión a Internet). Si falla la instalación de paquetes espaciales como `sf`, puede ser necesario instalar dependencias del sistema (`gdal`, `proj`, `geos`) o usar el instalador binario de R desde CRAN.
 
 ---
 
