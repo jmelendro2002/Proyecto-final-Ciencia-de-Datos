@@ -28,8 +28,6 @@ p_load("tidyverse",
       "rnaturalearth", 
       "rnaturalearthdata")
 
-setwd('/Users/juanpablomelendro/Library/CloudStorage/GoogleDrive-juanpablomelendro@hotmail.com/My Drive/Semestre 9/Ciencia de datos/Talleres/Final')
-
 # Usamos el paquete 'rnaturalearth' para obtener los datos espaciales
 mundo <- ne_countries(scale = "medium", returnclass = "sf")
 
@@ -48,7 +46,7 @@ latam <- mundo %>%
   st_transform(10603) # Utilizamos esta proyección como recomendación del World Geodenic System para proyecciones en Latinoamérica
 
 # Utilizamos esta base de datos construida a partir de datos del Banco Mundial y el FMI.
-dta_raw <- read.csv("Data.csv", sep = ";")
+dta_raw <- read.csv("https://raw.githubusercontent.com/jmelendro2002/Proyecto-final-Ciencia-de-Datos/refs/heads/main/data/Data.csv", sep = ";")
 
 dta <- dta_raw %>%
   clean_names() %>%
