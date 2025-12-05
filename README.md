@@ -72,8 +72,7 @@ tmp <- tempdir()
 zipfile <- file.path(tmp, "repo.zip")
 download.file("https://github.com/jmelendro2002/Proyecto-final-Ciencia-de-Datos/archive/refs/heads/main.zip", zipfile, mode = "wb")
 unzip(zipfile, exdir = tmp)
-dirs <- list.dirs(tmp, recursive = FALSE)
-dir <- dirs[grepl("Proyecto-final-Ciencia-de-Datos", dirs)][1]
+dir <- list.dirs(tmp, recursive = FALSE)[grepl("Proyecto-final-Ciencia-de-Datos", list.dirs(tmp, recursive = FALSE))[1]]
 setwd(dir)
 source("script/código_FINAL.R")
 ```
