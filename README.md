@@ -62,8 +62,10 @@ El script instalará automáticamente los paquetes necesarios usando `pacman`:
 
 ### 4. **Alternativa con un solo código**
 
-   1. Abrir RStudio.
-   2. Copiar y pegar el siguiente código:
+   1. Abrir el enlace del repositorio en el navegador: `https://github.com/jmelendro2002/Proyecto-final-Ciencia-de-Datos`
+   2. Pulsar **Code → Download ZIP** y descomprimir el ZIP.
+   3. Abrir RStudio
+   4. Copiar y pegar el siguiente código:
 
 ```r
 tmp <- tempdir()
@@ -74,8 +76,8 @@ dir <- list.dirs(tmp, recursive = FALSE)[grepl("Proyecto-final-Ciencia-de-Datos"
 setwd(dir)
 source("script/código_FINAL.R")
 ```
-   3. Presionar `Ctrl+Shift+Enter` (o `Cmd+Shift+Enter` en macOS) para ejecutar todo el script
-   4. O usar `Ctrl+A` → `Ctrl+Enter` para seleccionar y ejecutar
+   5. Presionar `Ctrl+Shift+Enter` (o `Cmd+Shift+Enter` en macOS) para ejecutar todo el script
+   6. O usar `Ctrl+A` → `Ctrl+Enter` para seleccionar y ejecutar
 
 ---
 
