@@ -65,19 +65,6 @@ El script instalará automáticamente los paquetes necesarios usando `pacman`:
 
 ---
 
-## Estructura del Proyecto
-
-```
-taller-final-ciencia-datos/
-├── README.md                    # Este archivo
-├── script/
-│   └── código_FINAL.R          # Script principal de análisis
-└── data/
-    └── Data.csv                # Base de datos (CSV)
-```
-
----
-
 ## Estructura del Análisis
 
 ### 1. **Preparación del Entorno y Carga de Datos**
@@ -194,23 +181,6 @@ source("script/código_FINAL.R")
 Notas rápidas:
 - Asegúrate de tener `R` y `Rscript` instalados. Verificar con `Rscript --version`.
 - El script intentará instalar paquetes faltantes (requiere conexión a Internet). Si falla la instalación de paquetes espaciales como `sf`, puede ser necesario instalar dependencias del sistema (`gdal`, `proj`, `geos`) o usar el instalador binario de R desde CRAN.
-
-
-### En RStudio:
-
-1. Abre RStudio
-2. Ve a File → Open File
-3. Selecciona `script/código_FINAL.R`
-4. Presiona `Ctrl+Shift+Enter` (o `Cmd+Shift+Enter` en macOS) para ejecutar todo el script
-5. O usa `Ctrl+A` → `Ctrl+Enter` para seleccionar y ejecutar
-
-### En R interactivo:
-
-```r
-# En la consola de R
-setwd("/ruta/a/taller-final-ciencia-datos")
-source("script/código_FINAL.R")
-```
 
 ---
 
